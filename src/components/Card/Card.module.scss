@@ -1,52 +1,54 @@
 .card {
-    border: 1px solid #f3f3f3;
-    padding: calc(30/1250*100vw);
-    width: calc(220/1250*100vw);
-    border-radius: calc(40/1250*100vw);
-    margin-right: calc(30/1250*100vw);
-    margin-bottom: calc(30/1250*100vw);
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-  
-    &:hover {
-      box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
-      transform: translateY(-5px);
-    }
-  
-    .favorite {
-      position: absolute;
-      cursor: pointer;
-      img {
-        width: calc(32/1250*100vw);
-        height: calc(32/1250*100vw);
-      }
-    }
-    > img {
-      width: calc(133/1250*100vw);
-      height: calc(112/1250*100vw);
-    }
-  
-    span {
-      font-size: calc(13/1250*100vw);
-      opacity: 0.5;
-      text-transform: uppercase;
-    }
-  
-    b {
-      font-size: calc(13/1250*100vw);
-    }
-  
-    h5 {
-      font-weight: 400;
-      font-size: calc(14/1250*100vw);
-    }
+  border: 1px solid #F3F3F3;
+  padding: calc(30 / 1250 * 100vw);
+  width: calc(220 / 1250 * 100vw);
+  border-radius: calc(40 / 1250 * 100vw);
+  margin-right: calc(30 / 1250 * 100vw);
+  margin-bottom: calc(30 / 1250 * 100vw);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
   }
-  
-.plus {
-    background: #FFFFFF;
-    border: 1px solid #F2F2F2;
-    box-sizing: border-box;
-    border-radius: calc(8/1250*100vw);
-    width: calc(32/1250*100vw);
-    height: calc(32/1250*100vw);
+
+  .favorite {
+    position: absolute;
     cursor: pointer;
+
+    img {
+      width: calc(32 / 1250 * 100vw);
+      height: calc(32 / 1250 * 100vw);
+    }
   }
+
+  > img {
+    width: calc(133 / 1250 * 100vw);
+    height: calc(112 / 1250 * 100vw);
+  }
+
+  span {
+    font-size: calc(13 / 1250 * 100vw);
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  b {
+    font-size: calc(13 / 1250 * 100vw);
+  }
+
+  h5 {
+    font-weight: 400;
+    font-size: calc(14 / 1250 * 100vw);
+  }
+}
+
+.plus {
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  border-radius: calc(8 / 1250 * 100vw);
+  width: calc(32 / 1250 * 100vw);
+  height: calc(32 / 1250 * 100vw);
+  cursor: pointer;
+}

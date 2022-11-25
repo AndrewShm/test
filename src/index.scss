@@ -3,7 +3,7 @@ body {
   font-family: 'Inter', system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e7f6ff;
+  background-color: #E7F6FF;
 }
 
 * {
@@ -11,34 +11,34 @@ body {
 }
 
 .wrapper {
-  background: #ffffff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
-  max-width: calc(1080/1250*100vw);
-  margin: 0 auto;
-  margin-top: calc(80/1250*100vw);
+  max-width: calc(1080 / 1250 * 100vw);
+  margin: calc(80 / 1250 * 100vw) auto 0;
 }
 
 .header {
-  padding: calc(40/1250*100vw);
-  border-bottom: 1px solid #eaeaea;
+  padding: calc(40 / 1250 * 100vw);
+  border-bottom: 1px solid #EAEAEA;
 
   .header-left {
     img {
-      width: calc(40/1250*100vw);
-      height: calc(40/1250*100vw);
-      margin-right: calc(15/1250*100vw);
+      width: calc(40 / 1250 * 100vw);
+      height: calc(40 / 1250 * 100vw);
+      margin-right: calc(15 / 1250 * 100vw);
     }
   }
 
   .header-right {
     .header-right__cart {
-      margin-right: calc(30/1250*100vw);
+      margin-right: calc(30 / 1250 * 100vw);
     }
+
     img {
-      width: calc(18/1250*100vw);
-      height: calc(18/1250*100vw);
-      margin-right: calc(15/1250*100vw);
+      width: calc(18 / 1250 * 100vw);
+      height: calc(18 / 1250 * 100vw);
+      margin-right: calc(15 / 1250 * 100vw);
     }
   }
 
@@ -49,36 +49,37 @@ body {
 }
 
 .content {
-  padding: calc(40/1250*100vw);
+  padding: calc(40 / 1250 * 100vw);
+
   .content__heading-block {
-    margin-bottom: calc(40/1250*100vw);
+    margin-bottom: calc(40 / 1250 * 100vw);
   }
 }
 
 .search-block {
-  border: 1px solid #f3f3f3;
-  border-radius: calc(10/1250*100vw);
-  padding: 0 calc(15/1250*100vw);
+  border: 1px solid #F3F3F3;
+  border-radius: calc(10 / 1250 * 100vw);
+  padding: 0 calc(15 / 1250 * 100vw);
   position: relative;
 
   .clear {
     position: absolute;
-    right: calc(15/1250*100vw);
-    top: calc(14/1250*100vw);
-    width: calc(18/1250*100vw);
-    height: calc(18/1250*100vw);
+    right: calc(15 / 1250 * 100vw);
+    top: calc(14 / 1250 * 100vw);
+    width: calc(18 / 1250 * 100vw);
+    height: calc(18 / 1250 * 100vw);
   }
 
   input {
     border: 0;
-    padding: calc(13/1250*100vw);
-    font-size: calc(16/1250*100vw);
-    width: calc(200/1250*100vw);
+    padding: calc(13 / 1250 * 100vw);
+    font-size: calc(16 / 1250 * 100vw);
+    width: calc(200 / 1250 * 100vw);
   }
 }
 
 .overlay {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -89,35 +90,35 @@ body {
 
 .drawer {
   position: absolute;
-  width: calc(420/1250*100vw);
+  width: calc(420 / 1250 * 100vw);
   height: 100%;
   right: 0;
-  background: #ffffff;
+  background: #FFFFFF;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-  padding: calc(30/1250*100vw);
+  padding: calc(30 / 1250 * 100vw);
   display: flex;
   flex-direction: column;
 
   .drawer-heading {
-    margin: 0;
-    margin-bottom: calc(30/1250*100vw);
-    font-size: calc(24/1250*100vw);
+    margin: 0 0 calc(30 / 1250 * 100vw);
+    font-size: calc(24 / 1250 * 100vw);
   }
 
   .cartEmpty {
     text-align: center;
+
     p {
-      width: calc(280/1250*100vw);
-      line-height: calc(24/1250*100vw);
+      width: calc(280 / 1250 * 100vw);
+      line-height: calc(24 / 1250 * 100vw);
     }
 
     .greenButton {
-      width: calc(245/1250*100vw);
-      margin-top: calc(20/1250*100vw);
+      width: calc(245 / 1250 * 100vw);
+      margin-top: calc(20 / 1250 * 100vw);
 
       &:hover {
         img {
-         transform: rotate(180deg) translateX(3px);
+          transform: rotate(180deg) translateX(3px);
         }
       }
 
@@ -125,7 +126,7 @@ body {
         position: relative;
         top: 1px;
         transform: rotate(180deg);
-        margin-right: calc(15/1250*100vw);
+        margin-right: calc(15 / 1250 * 100vw);
         transition: transform 0.15s ease-in-out;
       }
     }
@@ -134,92 +135,79 @@ body {
   .items {
     flex: 1;
     overflow: auto;
-    margin-bottom: calc(40/1250*100vw);
+    margin-bottom: calc(40 / 1250 * 100vw);
   }
 
   .cart-total-block {
     ul {
-      margin-bottom: calc(40/1250*100vw) !important;
+      margin-bottom: calc(40 / 1250 * 100vw) !important;
     }
 
     li {
       display: flex;
       align-items: flex-end;
-      margin-bottom: calc(20/1250*100vw);
+      margin-bottom: calc(20 / 1250 * 100vw);
 
       div {
         flex: 1;
         height: 1px;
-        border-bottom: 1px dashed #dfdfdf;
+        border-bottom: 1px dashed #DFDFDF;
         position: relative;
         top: -4px;
-        margin-left: calc(7/1250*100vw);
-        margin-right: calc(7/1250*100vw);
+        margin-left: calc(7 / 1250 * 100vw);
+        margin-right: calc(7 / 1250 * 100vw);
       }
     }
 
     .greenButton {
       width: 100%;
-      height: calc(55/1250*100vw);
-      background: #9dd558;
-      border-radius: calc(18/1250*100vw);
+      height: calc(55 / 1250 * 100vw);
+      background: #9DD558;
+      border-radius: calc(18 / 1250 * 100vw);
       border: 0;
-      color: #fff;
-      font-size: calc(16/1250*100vw);
+      color: #FFFFFF;
+      font-size: calc(16 / 1250 * 100vw);
       font-weight: 500;
       cursor: pointer;
       transition: background 0.2s ease-in-out;
 
       &:hover {
-        background: lighten(#9dd558, 5%);
+        background: lighten(#9DD558, 5%);
       }
 
       &:active {
-        background: darken(#9dd558, 5%);
+        background: darken(#9DD558, 5%);
       }
     }
   }
 }
 
-.greenButton {
-  width: 100%;
-  height: calc(55/1250*100vw);
-  background: #9dd558;
-  border-radius: calc(18/1250*100vw);
-  border: 0;
-  color: #fff;
-  font-size: calc(16/1250*100vw);
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-
 .cart-item {
-  border: 1px solid #f3f3f3;
-  border-radius: calc(20/1250*100vw);
+  border: 1px solid #F3F3F3;
+  border-radius: calc(20 / 1250 * 100vw);
   overflow: hidden;
-  padding: calc(20/1250*100vw);
-  margin-bottom: calc(20/1250*100vw);
+  padding: calc(20 / 1250 * 100vw);
+  margin-bottom: calc(20 / 1250 * 100vw);
 
   .cartItemImg {
-    height: calc(70/1250*100vw);
-    width: calc(70/1250*100vw);
+    height: calc(70 / 1250 * 100vw);
+    width: calc(70 / 1250 * 100vw);
     background-size: contain;
-    background-position: 0 calc(-3/1250*100vw);
+    background-position: 0 calc(-3 / 1250 * 100vw);
     background-repeat: no-repeat;
-    margin-right: calc(20/1250*100vw);
+    margin-right: calc(20 / 1250 * 100vw);
   }
 
   p {
-    font-size: calc(16/1250*100vw);
+    font-size: calc(16 / 1250 * 100vw);
     margin: 0;
   }
 }
 
 .cart-item__sneakers-logo {
-  margin-right: calc(20/1250*100vw);
-  width: calc(70/1250*100vw);
-  height: calc(70/1250*100vw);
+  margin-right: calc(20 / 1250 * 100vw);
+  width: calc(70 / 1250 * 100vw);
+  height: calc(70 / 1250 * 100vw);
 }
 
 .remove-button {
@@ -233,13 +221,14 @@ body {
 }
 
 .cart-item__sneakers-text-block {
-  margin-right: calc(20/1250*100vw);
+  margin-right: calc(20 / 1250 * 100vw);
+
   .cart-item__sneakers-text {
-    margin-bottom: calc(5/1250*100vw);
-    font-size: calc(16/1250*100vw);
+    margin-bottom: calc(5 / 1250 * 100vw);
+    font-size: calc(16 / 1250 * 100vw);
   }
 
   b {
-    font-size: calc(14/1250*100vw);
+    font-size: calc(14 / 1250 * 100vw);
   }
 }
