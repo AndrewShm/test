@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e7f6ff;
+}
+
+* {
+  font-family: 'Inter', system-ui;
+}
+
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: calc(1080/1250*100vw);
+  margin: 0 auto;
+  margin-top: calc(80/1250*100vw);
+}
+
+.header {
+  padding: calc(40/1250*100vw);
+  border-bottom: 1px solid #eaeaea;
+
+  .header-left {
+    img {
+      width: calc(40/1250*100vw);
+      height: calc(40/1250*100vw);
+      margin-right: calc(15/1250*100vw);
+    }
+  }
+
+  .header-right {
+    .header-right__cart {
+      margin-right: calc(30/1250*100vw);
+    }
+    img {
+      width: calc(18/1250*100vw);
+      height: calc(18/1250*100vw);
+      margin-right: calc(15/1250*100vw);
+    }
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+.content {
+  padding: calc(40/1250*100vw);
+  .content__heading-block {
+    margin-bottom: calc(40/1250*100vw);
+  }
+}
+
+.search-block {
+  border: 1px solid #f3f3f3;
+  border-radius: calc(10/1250*100vw);
+  padding: 0 calc(15/1250*100vw);
+  position: relative;
+
+  .clear {
+    position: absolute;
+    right: calc(15/1250*100vw);
+    top: calc(14/1250*100vw);
+    width: calc(18/1250*100vw);
+    height: calc(18/1250*100vw);
+  }
+
+  input {
+    border: 0;
+    padding: calc(13/1250*100vw);
+    font-size: calc(16/1250*100vw);
+    width: calc(200/1250*100vw);
+  }
+}
+
+.overlay {
+  position:absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.drawer {
+  position: absolute;
+  width: calc(420/1250*100vw);
+  height: 100%;
+  right: 0;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: calc(30/1250*100vw);
+  display: flex;
+  flex-direction: column;
+
+  .drawer-heading {
+    margin: 0;
+    margin-bottom: calc(30/1250*100vw);
+    font-size: calc(24/1250*100vw);
+  }
+
+  .cartEmpty {
+    text-align: center;
+    p {
+      width: calc(280/1250*100vw);
+      line-height: calc(24/1250*100vw);
+    }
+
+    .greenButton {
+      width: calc(245/1250*100vw);
+      margin-top: calc(20/1250*100vw);
+
+      &:hover {
+        img {
+         transform: rotate(180deg) translateX(3px);
+        }
+      }
+
+      img {
+        position: relative;
+        top: 1px;
+        transform: rotate(180deg);
+        margin-right: calc(15/1250*100vw);
+        transition: transform 0.15s ease-in-out;
+      }
+    }
+  }
+
+  .items {
+    flex: 1;
+    overflow: auto;
+    margin-bottom: calc(40/1250*100vw);
+  }
+
+  .cart-total-block {
+    ul {
+      margin-bottom: calc(40/1250*100vw) !important;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: calc(20/1250*100vw);
+
+      div {
+        flex: 1;
+        height: 1px;
+        border-bottom: 1px dashed #dfdfdf;
+        position: relative;
+        top: -4px;
+        margin-left: calc(7/1250*100vw);
+        margin-right: calc(7/1250*100vw);
+      }
+    }
+
+    .greenButton {
+      width: 100%;
+      height: calc(55/1250*100vw);
+      background: #9dd558;
+      border-radius: calc(18/1250*100vw);
+      border: 0;
+      color: #fff;
+      font-size: calc(16/1250*100vw);
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: lighten(#9dd558, 5%);
+      }
+
+      &:active {
+        background: darken(#9dd558, 5%);
+      }
+    }
+  }
+}
+
+.greenButton {
+  width: 100%;
+  height: calc(55/1250*100vw);
+  background: #9dd558;
+  border-radius: calc(18/1250*100vw);
+  border: 0;
+  color: #fff;
+  font-size: calc(16/1250*100vw);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.cart-item {
+  border: 1px solid #f3f3f3;
+  border-radius: calc(20/1250*100vw);
+  overflow: hidden;
+  padding: calc(20/1250*100vw);
+  margin-bottom: calc(20/1250*100vw);
+
+  .cartItemImg {
+    height: calc(70/1250*100vw);
+    width: calc(70/1250*100vw);
+    background-size: contain;
+    background-position: 0 calc(-3/1250*100vw);
+    background-repeat: no-repeat;
+    margin-right: calc(20/1250*100vw);
+  }
+
+  p {
+    font-size: calc(16/1250*100vw);
+    margin: 0;
+  }
+}
+
+.cart-item__sneakers-logo {
+  margin-right: calc(20/1250*100vw);
+  width: calc(70/1250*100vw);
+  height: calc(70/1250*100vw);
+}
+
+.remove-button {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.cart-item__sneakers-text-block {
+  margin-right: calc(20/1250*100vw);
+  .cart-item__sneakers-text {
+    margin-bottom: calc(5/1250*100vw);
+    font-size: calc(16/1250*100vw);
+  }
+
+  b {
+    font-size: calc(14/1250*100vw);
+  }
+}
