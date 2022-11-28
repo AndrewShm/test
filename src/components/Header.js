@@ -1,22 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../hooks/useCart';
 
 function Header(props) {
+  const { totalPrice } = useCart();
+
   return (
-    <header className='header d-flex justify-between align-center'>
+    <header className='header'>
       <Link to='/'>
-        <div className='header-left d-flex align-center'>
-          <img className='header-left__image' src='/img/logo.png' alt='Logotype'/>
+        <div className='headerLeft'>
+          <img src='/img/logo.png' alt='Logotype'/>
           <div>
-            <h3 className='header-left__heading text-uppercase'>React sneakers</h3>
-            <p className='header-left__text opacity-5'>Магазин лучших кроссовок</p>
+            <h3 className='headerLeftHeading'>React sneakers</h3>
+            <p className='headerLeftText'>Магазин лучших кроссовок</p>
           </div>
         </div>
       </Link>
-      <ul className='header-right d-flex'>
+      <ul className='headerRight'>
         <li onClick={ props.onClickCart } className='header-right__cart cu-p'>
           <img src='/img/cart.svg' alt='Cart'/>
-          <span>1205 руб.</span>
+          <span>{totalPrice} руб.</span>
         </li>
         <li>
           <Link to='/favorites'>
@@ -24,10 +27,14 @@ function Header(props) {
           </Link>
         </li>
         <li>
-          <img src='/img/user.svg' alt='User'/>
+          <Link to='/orders'>
+            <img src='/img/user.svg' alt='User'/>
+          </Link>
         </li>
-        <li onClick={ props.onClickPhone } className='header-right__feedback-form'>
-          <img src='/img/phone.png' alt='Feedback'/>
+        <li onClick={ props.onClickPhone }>
+          <Link to='/feedback'>
+            <img src='/img/phone.png' alt='Feedback'/>
+          </Link>
         </li>
       </ul>
     </header>

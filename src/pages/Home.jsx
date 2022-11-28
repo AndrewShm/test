@@ -2,11 +2,25 @@ import React from 'react';
 import Card from '../components/Card';
 
 function Home({ items, searchValue, setSearchValue, onChangeSearchInput, onAddToFavorite, onAddToCart }) {
+
+  const renderItems = () => {
+    return items
+    .filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
+    .map((item, index) => (
+      <Card
+        key={ index }
+        onFavorite={ (obj) => onAddToFavorite(obj) }
+        onPlus={ (obj) => onAddToCart(obj) }
+        { ...item }
+      />
+    ))
+  }
+
   return (
     <div className='content'>
-      <div className='content__heading-block d-flex justify-between align-center'>
-        <h1 className='content__heading'>{ searchValue ? `Поиск по запросу: "${ searchValue }"` : 'Все кроссовки' }</h1>
-        <div className='content__search-block search-block d-flex'>
+      <div className='contentHeadingBlock'>
+        <h1>{ searchValue ? `Поиск по запросу: "${ searchValue }"` : 'Все кроссовки' }</h1>
+        <div className='searchBlock'>
           <img src='/img/search.svg' alt='Search'/>
           { searchValue && (
             <img
@@ -19,19 +33,8 @@ function Home({ items, searchValue, setSearchValue, onChangeSearchInput, onAddTo
           <input onChange={ onChangeSearchInput } value={ searchValue } placeholder='Поиск...'/>
         </div>
       </div>
-      <div className='d-flex flex-wrap'>
-        { items
-          .filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
-          .map((item, index) => (
-            <Card
-              key={ index }
-              title={ item.title }
-              price={ item.price }
-              imageUrl={ item.imageUrl }
-              onFavorite={ (obj) => onAddToFavorite(obj) }
-              onPlus={ (obj) => onAddToCart(obj) }
-            />
-          )) }
+      <div className='contentItems'>
+        { renderItems() }
       </div>
     </div>
   );
