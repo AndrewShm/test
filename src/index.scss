@@ -299,6 +299,65 @@ body {
   z-index: 1;
 }
 
+.cardPopupConteiner {
+  position: absolute;
+  width: calc(500 / 1250 * 100vw);
+  right: calc(375 / 1250 * 100vw);
+  top: calc(175 / 1250 * 100vw);
+  background: #FFFFFF;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: calc(30 / 1250 * 100vw);
+  border-radius: calc(20 / 1250 * 100vw);
+
+  .removeButton {
+    position: absolute;
+    right: calc(30 / 1250 * 100vw);
+  }
+
+  .cardPopupImg {
+    width: 60%;
+    margin-top: calc(15 / 1250 * 100vw);
+  }
+
+  h3 {
+    position: absolute;
+    background-color: #e7f6ffa2;
+    border-radius: calc(10 / 1250 * 100vw);
+    padding: calc(10 / 1250 * 100vw);
+    font-size: calc(20 / 1250 * 100vw);
+  }
+
+  h2 {
+    position: absolute;
+    right: calc(70 / 1250 * 100vw);
+    top: calc(120 / 1250 * 100vw);
+    background-color: #e7f6ffa2;
+    padding: calc(10 / 1250 * 100vw);
+    font-size: calc(24 / 1250 * 100vw);
+    border-radius: calc(10 / 1250 * 100vw);
+  }
+
+  .plus {
+    position: absolute;
+    right: calc(70 / 1250 * 100vw);
+    top: calc(210 / 1250 * 100vw);
+    width: calc(50 / 1250 * 100vw);
+    cursor: pointer;
+  }
+
+  .favorite {
+    position: absolute;
+    right: calc(150 / 1250 * 100vw);
+    top: calc(210 / 1250 * 100vw);
+    width: calc(50 / 1250 * 100vw);
+    cursor: pointer;
+  }
+
+  p {
+    font-size: calc(18 / 1250 * 100vw);
+  }
+}
+
 .drawer {
   position: absolute;
   width: calc(420 / 1250 * 100vw);
