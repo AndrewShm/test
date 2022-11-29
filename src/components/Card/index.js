@@ -9,6 +9,7 @@ function Card({
   title, 
   imageUrl, 
   price, 
+  description,
   onFavorite, 
   onPlus, 
   favorited = false, 
@@ -56,6 +57,7 @@ function Card({
         title={title}
         image={imageUrl}
         price={price}
+        description={description}
         isFavorite={isFavorite}
         onClickFavorite={onClickFavorite}
         onClickPlus={onClickPlus}

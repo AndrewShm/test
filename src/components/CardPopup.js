@@ -13,9 +13,6 @@ function CardPopup (props) {
                     {props.title}
                 </h3>
                 <img className="cardPopupImg" alt={props.title} src={props.image} />
-                    <p className="CardPopupDescription">
-                        {props.description}
-                    </p>
                 <h2>
                     {props.price} руб.
                 </h2>
@@ -28,7 +25,7 @@ function CardPopup (props) {
                     />
                 }
                 <img onClick={props.onClickFavorite} className="favorite" src={props.isFavorite ? '/img/liked.svg' : '/img/unliked.svg'} alt='Unliked' />
-                <p>Здесь мог бы быть текст, но мокапи не хочет добавлять описание в мой json</p>
+                <p>{props.description}</p>
             </div>
         </div>
     )
