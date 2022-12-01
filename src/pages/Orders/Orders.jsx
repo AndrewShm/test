@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../../components/Card/Card';
+import styles from './Orders.module.scss'
 
 function Orders() {
   const [orders, setOrders] = React.useState([]);
@@ -17,11 +18,11 @@ function Orders() {
   }, []);
 
   return (
-    <div className='content'>
-      <div className='contentHeadingBlock'>
+    <div className={styles.content}>
+      <div className={styles.contentHeadingBlock}>
         <h1>Мои заказы</h1>
       </div>
-      <div className='contentItems'>
+      <div className={styles.contentItems}>
         { orders.map((item, index) => (
             <Card
               key={ index }

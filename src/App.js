@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
-import Header from './components/Header';
-import Drawer from './components/Drawer';
-import Feedback from './pages/Feedback';
-import Home from './pages/Home';
-import Favorites from './pages/Favorites';
-import Orders from './pages/Orders';
+import Header from './components/Header/Header';
+import Drawer from './components/Drawer/Drawer';
+import Feedback from './pages/Feedback/Feedback';
+import Home from './pages/Home/Home';
+import Favorites from './pages/Favorites/Favorites';
+import Orders from './pages/Orders/Orders';
 
 export const AppContext = React.createContext({});
 
@@ -116,7 +116,7 @@ function App() {
         />
 
         <Routes>
-          <Route path='/' element={
+          <Route path='' element={
             <Home
               items={ items }
               cartItems={ cartItems }
@@ -128,9 +128,9 @@ function App() {
             />
           }
           />
-          <Route path='/feedback' element={ <Feedback/> }/>
-          <Route path='/favorites' element={ <Favorites/> }/>
-          <Route path='/orders' element={ <Orders/> }/>
+          <Route path='feedback' element={ <Feedback/> }/>
+          <Route path='favorites' element={ <Favorites/> }/>
+          <Route path='orders' element={ <Orders/> }/>
         </Routes>
 
       </div>

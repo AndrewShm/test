@@ -1,16 +1,17 @@
 import React from 'react';
-import Card from '../components/Card';
-import { AppContext } from '../App';
+import Card from '../../components/Card/Card';
+import { AppContext } from '../../App';
+import styles from './Favorites.module.scss';
 
 function Favorites() {
   const { favorites, onAddToFavorite } = React.useContext(AppContext);
 
   return (
-    <div className='content'>
-      <div className='contentHeadingBlock'>
+    <div className={styles.content}>
+      <div className={styles.contentHeadingBlock}>
         <h1>Мои закладки</h1>
       </div>
-      <div className='contentItems'>
+      <div className={styles.contentItems}>
         { favorites
           .map((item, index) => (
             <Card

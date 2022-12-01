@@ -1,7 +1,8 @@
 import React from 'react';
-import Info from './Info';
+import Info from '../Info/Info';
 import axios from 'axios';
-import { useCart } from '../hooks/useCart';
+import { useCart } from '../../hooks/useCart';
+import styles from './Drawer.module.scss';
 
 function Drawer({ onClose, onRemove, items = [] }) {
   const { cartItems, setCartItems, totalPrice } = useCart();
@@ -30,27 +31,27 @@ function Drawer({ onClose, onRemove, items = [] }) {
   }
 
   return (
-    <div className='overlay'>
-      <div className='drawer'>
-        <h2 className='drawerHeading'>Корзина
-          <img onClick={ onClose } className='removeButton' src='/img/btn-remove.svg' alt='Close'/>
+    <div className={styles.overlay}>
+      <div className={styles.drawer}>
+        <h2 className={styles.drawerHeading}>Корзина
+          <img onClick={ onClose } className={styles.removeButton} src='img/btn-remove.svg' alt='Close'/>
         </h2>
 
         { items.length > 0 ? (
-          <div className='cartFull'>
-            <div className='items'>
+          <div className={styles.cartFull}>
+            <div className={styles.items}>
               { items.map((obj) => (
-                <div key={obj.id} className='cartItem'>
-                  <img className='cartSneakersLogo' src={ obj.imageUrl } alt='Sneakers'/>
-                  <div className='cartSneakersTextBlock'>
-                    <p className='cartSneakersText'>{ obj.title }</p>
+                <div key={obj.id} className={styles.cartItem}>
+                  <img className={styles.cartSneakersLogo} src={ obj.imageUrl } alt='Sneakers'/>
+                  <div className={styles.cartSneakersTextBlock}>
+                    <p className={styles.cartSneakersText}>{ obj.title }</p>
                     <b>{ obj.price } руб.</b>
                   </div>
-                  <img onClick={() => onRemove(obj.id)} className='removeButton' src='/img/btn-remove.svg' alt='Remove'/>
+                  <img onClick={() => onRemove(obj.id)} className={styles.removeButton} src='img/btn-remove.svg' alt='Remove'/>
                 </div>
               ))}
             </div>
-            <div className='cartTotalBlock'>
+            <div className={styles.cartTotalBlock}>
               <ul>
                 <li>
                   <span>Итого</span>
@@ -60,17 +61,17 @@ function Drawer({ onClose, onRemove, items = [] }) {
                 <li>
                   <span>Налог 13%:</span>
                   <div></div>
-                  <b>{totalPrice / 100 * 13} руб. </b>
+                  <b>{Math.round(totalPrice / 100 * 13)} руб. </b>
                 </li>
               </ul>
-              <button onClick={onClickOrder} className='greenButton'>Оформить заказ</button>
+              <button onClick={onClickOrder} className={styles.greenButton}>Оформить заказ</button>
             </div>
           </div>
         ) : (
           <Info 
             title={ isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
             description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок чтобы сделать заказ"}
-            image={isOrderComplete ? "/img/complete-order.jpg" : "/img/empty-cart.jpg"}
+            image={isOrderComplete ? "img/complete-order.jpg" : "img/empty-cart.jpg"}
           />)
         }
 
