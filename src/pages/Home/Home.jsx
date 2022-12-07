@@ -25,7 +25,7 @@ function Home({ items, searchValue, setSearchValue, onChangeSearchInput, onAddTo
 
   const renderItems = () => {
 
-    return items
+    return (items || [])
     .filter((item) => item.title.toLowerCase().includes(searchValue.toLowerCase()))
     .filter(({ price }) => price >= minPrice && price <= maxPrice)
     .filter((item) => item.size.includes(searchSizeValue))

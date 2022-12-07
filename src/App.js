@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header/Header';
 import Drawer from './components/Drawer/Drawer';
@@ -115,24 +114,19 @@ function App() {
           onClickCart={ () => setCartOpened(true) }
         />
 
-        <Routes>
-          <Route path='' element={
-            <Home
-              items={ items }
-              cartItems={ cartItems }
-              searchValue={ searchValue }
-              setSearchValue={ setSearchValue }
-              onChangeSearchInput={ onChangeSearchInput }
-              onAddToFavorite={ onAddToFavorite }
-              onAddToCart={ onAddToCart }
-            />
-          }
-          />
-          <Route path='feedback' element={ <Feedback/> }/>
-          <Route path='favorites' element={ <Favorites/> }/>
-          <Route path='orders' element={ <Orders/> }/>
-        </Routes>
-
+        
+        <Home
+          items={ items || [] }
+          cartItems={ cartItems }
+          searchValue={ searchValue }
+          setSearchValue={ setSearchValue }
+          onChangeSearchInput={ onChangeSearchInput }
+          onAddToFavorite={ onAddToFavorite }
+          onAddToCart={ onAddToCart }
+        />
+        <Feedback/>
+        <Favorites/> 
+        <Orders/> 
       </div>
     </AppContext.Provider>
   );
